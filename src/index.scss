@@ -1,8 +1,12 @@
+@import 'src/styles/colors.scss';
+@import 'src/styles/fonts.scss';
+
 html {
   font-size: 10px;
-}
 
-body {
-  background-color: #2f2f2f;
-  color: #ffffff;
+  body {
+    background-color: $color-background;
+    color: $color-font;
+    font-family: $font-family-text;;
+  }
 }
