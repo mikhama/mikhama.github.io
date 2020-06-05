@@ -1,4 +1,4 @@
-@keyframes animation-social-linkedin {
+@keyframes social-linkedin {
   0% { transform: rotate(0deg); }
   12% { transform: rotate(8deg); }
   25% { transform: rotate(10deg); }
@@ -10,12 +10,12 @@
   100% { transform: rotate(0deg); }
 }
 
-@keyframes animation-social-github {
+@keyframes social-github {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(-360deg); }
 }
 
-@keyframes animation-menu-rotate {
+@keyframes menu-rotate-and-move {
   0% { transform: rotate(45deg); }
   25% { transform: rotate(0deg); }
   50% { transform: translateX(-50.5rem); }
@@ -23,7 +23,12 @@
   100% { transform: translateX(-50.5rem) scale(0.5) rotate(90deg); }
 }
 
-@keyframes animation-menu-icons-rotate {
+@keyframes menu-minimize {
+  0% { height: 50rem; }
+  100% { height: 20rem; }
+}
+
+@keyframes menu-icons-rotate {
   0% { transform: rotate(-45deg); }
   25% { transform: rotate(0deg); }
   50% { transform: rotate(0deg); }
@@ -31,23 +36,18 @@
   100% { transform: rotate(-90deg); }
 }
 
-@keyframes animation-menu-minimize {
-  0% { height: 50rem; }
-  33% { height: 50rem; }
-  66% { height: 50rem; }
-  100% { height: 20rem; }
+@keyframes about-hide {
+  0% { opacity: 1; z-index: 1; }
+  100% { opacity: 0; z-index: -1; }
 }
 
-@keyframes animation-about-hide {
-  0% { opacity: 1; }
-  33% { opacity: 1 }
-  66% { opacity: 1; }
-  100% { opacity: 0; }
-}
-
-@keyframes animation-header-collapse {
+@keyframes header-collapse {
   0% { height: 116rem; }
-  25% { height: 116rem; }
-  50% { height: 116rem; }
   100% { height: 23rem; }
 }
+
+@keyframes page-title-show {
+  0% { opacity: 0; z-index: -1; }
+  100% { opacity: 1; z-index: 1; width: 101.5rem; }
+}
+

@@ -1,0 +1,22 @@
+@import 'src/styles/index.scss';
+
+.page-title {
+  opacity: 0;
+  z-index: -1;
+
+  position: absolute;
+  margin-top: -9.5rem;
+  margin-left: 21.3rem;
+  height: 7.3rem;
+  background: $color-dolly-transparent;
+  color: $color-black;
+  width: 0.1rem;
+
+  &__label {
+    margin: 0;
+    line-height: 7.3rem;
+    font-size: 5rem;
+    text-transform: uppercase;
+    padding-left: 4rem;
+  }
+}

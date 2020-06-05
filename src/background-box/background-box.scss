@@ -1,0 +1,13 @@
+@import 'src/styles/index.scss';
+
+.background-box {
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    width: $content-size - 12rem;
+    margin: 0 6rem;
+  }
+}

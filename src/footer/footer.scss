@@ -1,0 +1,23 @@
+@import 'src/styles/index.scss';
+
+.footer {
+  &__background-box {
+    background-color: $color-mine-shaft;
+    background-image: url("footer.jpg");
+  }
+
+  &__footer-links {
+    margin: 4rem 0;
+  }
+
+  &__social {
+    margin-top: 24rem;
+    margin-bottom: 0;
+  }
+
+  &__copyright {
+    font-size: 1.8rem;
+    color: $color-copyright;
+    margin-bottom: 1.7rem;
+  }
+}

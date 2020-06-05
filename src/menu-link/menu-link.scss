@@ -1,0 +1,94 @@
+@import 'src/styles/index.scss';
+
+.menu-link {
+  cursor: pointer;
+  margin: 1rem;
+  font-size: 8rem;
+  display: inline-flex;
+  width: 14.6rem;
+  height: 14.6rem;
+  color: $color-menu-icon;
+  align-items: center;
+  justify-content: center;
+  background: $color-brand;
+  box-sizing: border-box;
+  transition: all 0.3s linear;
+
+  &:hover {
+    transform: rotate(-45deg) scale(1.2);
+    box-shadow: 0 0 0.9rem 0.4rem rgba(51,51,51,0.84);
+
+    .menu-link__icon {
+      transform: rotate(0deg);
+    }
+
+    .menu-link__hidden-name {
+      opacity: 1;
+    }
+  }
+
+  &:nth-child(2n) {
+    &:hover {
+      z-index: 1;
+      .menu-link__hidden-name {
+        &::after {
+          visibility: visible;
+          transform: scaleX(15);
+          z-index: -1;
+        }
+      }
+    }
+  }
+
+  &:nth-child(2n - 1) {
+    .menu-link__hidden-name {
+      left: auto;
+      right: 17rem;
+      text-align: right;
+      width: 23.6rem;
+    }
+
+    &:hover {
+      z-index: 1;
+      .menu-link__hidden-name {
+        &::before {
+          visibility: visible;
+          transform: scaleX(15);
+          z-index: -1;
+        }
+      }
+    }
+  }
+}
+
+.menu-link__icon {
+  transform: rotate(-45deg);
+  transition: transform 0.3s linear;
+}
+
+.menu-link__hidden-name {
+  opacity: 0;
+  position: absolute;
+  left: 17rem;
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding-top: 5rem;
+  transition: all 0.3s linear;
+
+  &::after {
+    @include menu-link-label-background;
+
+    transform-origin: 0% 100%;
+    top: -2.5rem;
+    left: -2.5rem;
+  }
+
+  &::before {
+    @include menu-link-label-background;
+
+    transform-origin: 100% 0%;
+    top: -2.5rem;
+    left: 24rem;
+  }
+}

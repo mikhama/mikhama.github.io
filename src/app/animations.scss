@@ -1,0 +1,72 @@
+@import 'src/styles/index.scss';
+
+.app {
+  &__menu-container {
+    &_animation {
+      animation-name: menu-rotate-and-move;
+      animation-duration: 1.2s;
+      animation-fill-mode: forwards;
+
+      .menu__menu-link {
+        &:hover {
+          transform: none;
+          box-shadow: none;
+
+          .menu-link__hidden-name {
+            opacity: 0;
+
+            &::after {
+              visibility: hidden;
+            }
+
+            &::before {
+              visibility: hidden;
+            }
+          }
+        }
+      }
+
+      .menu-link__icon {
+        animation-name: menu-icons-rotate;
+        animation-duration: 1.2s;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+
+  &__menu {
+    &_animation {
+      animation-name: menu-minimize;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      animation-delay: 0.8s;
+    }
+  }
+
+  &__about {
+    &_animation {
+      animation-name: about-hide;
+      animation-duration: 0.4s;
+      animation-fill-mode: forwards;
+      animation-delay: 1.2s;
+    }
+  }
+
+  &__header-background-box-container {
+    &_animation {
+      animation-name: header-collapse;
+      animation-duration: 1.2s;
+      animation-fill-mode: forwards;
+      animation-delay: 1.2s;
+    }
+  }
+
+  &__page-title {
+    &_animation {
+      animation-name: page-title-show;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      animation-delay: 1.2s;
+    }
+  }
+}

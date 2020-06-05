@@ -1,0 +1,14 @@
+@import 'src/styles/colors.scss';
+
+@mixin menu-link-label-background {
+  visibility: hidden;
+  content: ' ';
+  position: absolute;
+  display: block;
+  height: 14.6rem;
+  width: 2rem;
+  background: $color-dolly;
+  transition: all 0.3s linear;
+  opacity: 0.7;
+}
+

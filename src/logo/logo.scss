@@ -1,0 +1,10 @@
+@import 'src/styles/index.scss';
+
+.logo {
+  cursor: pointer;
+  user-select: none;
+  color: $color-brand;
+  font-family: $font-family-logo;
+  font-size: 8.8rem;
+  height: fit-content;
+}

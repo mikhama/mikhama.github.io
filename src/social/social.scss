@@ -1,0 +1,42 @@
+@import 'src/styles/index.scss';
+
+.social {
+  list-style: none;
+  padding: 0;
+  font-size: 8rem;
+  display: flex;
+
+  &__item {
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 2.3rem;
+    height: fit-content;
+
+    &_linkedin {
+      &:hover {
+        .social__icon {
+          animation-name: social-linkedin;
+          animation-duration: 0.7s;
+        }
+      }
+    }
+
+    &_github {
+      &:hover {
+        .social__icon {
+          animation-name: social-github;
+          animation-duration: 1.2s;
+          animation-timing-function: linear;
+        }
+      }
+    }
+
+    &:hover {
+      color: $color-social-icon-hover;
+
+      .social__icon {
+        animation-iteration-count: infinite;
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import 'src/styles/index.scss';
+
+.footer-links {
+  font-size: 3rem;
+  list-style: none;
+  padding: 0;
+  line-height: 5rem;
+
+  &__item {
+    cursor: pointer;
+    user-select: none;
+
+    &_active {
+      font-size: 4.3rem;
+      font-weight: 700;
+      color: $color-links-active-item;
+    }
+
+    &:hover {
+      display: inline-block;
+      font-weight: 700;
+      transform: scale(1.2);
+      color: $color-links-active-item;
+    }
+  }
+}
