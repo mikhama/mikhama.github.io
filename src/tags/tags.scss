@@ -1,0 +1,19 @@
+@import 'src/styles/index.scss';
+
+.tags {
+  &__tag {
+    display: inline-block;
+    background: $color-brand;
+    color: $color-black;
+    font-size: 1.5rem;
+    padding: 0.4rem 0.8rem;
+    margin-bottom: 2rem;
+    margin-right: 1.5rem;
+
+    &_major {
+      padding: 0.5rem 1rem;
+      font-size: 2.4rem;
+      margin-right: 2.5rem;
+    }
+  }
+}

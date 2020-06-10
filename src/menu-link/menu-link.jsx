@@ -1,16 +1,23 @@
 import React from 'react';
+import { Link, withRouter } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import { compose, withRouteLinkClick } from '../hoc-helpers';
 
 const MenuLink = ({
   className,
   icon,
   label,
-  onClick,
+  handleOnClick,
 }) => (
-  <a className={`${className} menu-link`} onClick={onClick}>
+  <Link
+    className={`${className} menu-link`}
+    onClick={handleOnClick}
+    to={`/${label}`}
+  >
     <FontAwesomeIcon className="menu-link__icon" icon={icon} />
     <span className="menu-link__hidden-name">{ label }</span>
-  </a>
+  </Link>
 );
 
-export default MenuLink;
+export default compose(withRouteLinkClick, withRouter)(MenuLink);

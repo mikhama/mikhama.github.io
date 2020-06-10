@@ -1,43 +1,55 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
 import Menu from '../menu';
 import About from '../about';
 import Logo from '../logo';
 import BackgroundBox from '../background-box';
 import PageTitle from '../page-title';
+import { compose, withAnimation } from '../hoc-helpers';
 
 const Header = (props) => {
-  const { isMenuCollapseAnimation, activeMenuItem } = props;
+  const {
+    activeMenuItem,
+    history,
+    classNames,
+  } = props;
+
+  const isMenuCollapsed = history.location.pathname !== '/';
+  const activeItem = history.location.pathname.slice(1) || activeMenuItem;
+
+  const about = !isMenuCollapsed
+    ? (
+      <About
+        {...props}
+        className={`header__about app__about${classNames.about}`}
+      />
+    )
+    : '';
 
   return (
     <header className="header">
       <BackgroundBox
         className="header__background-box"
-        containerClassName={`header__background-box-container app__header-background-box-container${
-          isMenuCollapseAnimation
-            ? ' app__header-background-box-container_animation'
-            : ''}`}
+        containerClassName={`header__background-box-container app__header-background-box-container${classNames.backgroundBoxContainer}`}
       >
         <Logo className="header__logo" />
-        <About
-          {...props}
-          className={`header__about app__about${isMenuCollapseAnimation ? ' app__about_animation' : ''}`}
-        />
+        {about}
       </BackgroundBox>
 
       <Menu
         {...props}
-        className={`header__menu app__menu${isMenuCollapseAnimation ? ' app__menu_animation' : ''}`}
-        containerClassName={`app__menu-container${isMenuCollapseAnimation ? ' app__menu-container_animation' : ''}`}
-        activeItem={activeMenuItem}
+        className={`header__menu app__menu${classNames.menu}`}
+        containerClassName={`app__menu-container${classNames.menuContainer}`}
+        activeItem={activeItem}
       />
 
       <PageTitle
-        className={`app__page-title${isMenuCollapseAnimation ? ' app__page-title_animation' : ''}`}
-        titleLabel={activeMenuItem}
+        className={`app__page-title${classNames.pageTitle}`}
+        titleLabel={activeItem}
       />
     </header>
   );
 };
 
-export default Header;
+export default compose(withAnimation, withRouter)(Header);

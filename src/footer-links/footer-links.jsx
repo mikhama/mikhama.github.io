@@ -1,23 +1,27 @@
 import React from 'react';
 
-const FooterLinks = ({ className }) => (
-  <ul className={`${className} footer-links`}>
-    <li>
-      <a className="footer-links__item footer-links__item_active">#about</a>
+import FooterLink from '../footer-link';
+
+const links = [
+  'about',
+  'education',
+  'experience',
+  'portfolio',
+  'skills',
+];
+
+const FooterLinks = ({ className, collapseMenu, setIsMenuCollapseAnimation }) => {
+  const renderLinks = () => links.map((link) => (
+    <li key={link}>
+      <FooterLink label={link} collapseMenu={collapseMenu} className="footer-links__item" setIsMenuCollapseAnimation={setIsMenuCollapseAnimation} />
     </li>
-    <li>
-      <a className="footer-links__item">#education</a>
-    </li>
-    <li>
-      <a className="footer-links__item">#experience</a>
-    </li>
-    <li>
-      <a className="footer-links__item">#portfolio</a>
-    </li>
-    <li>
-      <a className="footer-links__item">#skills</a>
-    </li>
-  </ul>
-);
+  ));
+
+  return (
+    <ul className={`${className} footer-links`}>
+      {renderLinks()}
+    </ul>
+  );
+};
 
 export default FooterLinks;

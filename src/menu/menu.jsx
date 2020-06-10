@@ -32,13 +32,15 @@ const Menu = ({
   containerClassName,
   collapseMenu,
   activeItem,
+  setIsMenuCollapseAnimation,
 }) => {
   const renderMenuItems = () => menuItems.map((props) => (
     <MenuLink
       {...props}
       key={props.label}
       className={`menu__menu-link${activeItem === props.label ? ' menu__menu-link_active' : ''}`}
-      onClick={() => collapseMenu(props.label)}
+      collapseMenu={collapseMenu}
+      setIsMenuCollapseAnimation={setIsMenuCollapseAnimation}
     />
   ));
 

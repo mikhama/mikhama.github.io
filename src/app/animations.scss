@@ -2,10 +2,9 @@
 
 .app {
   &__menu-container {
-    &_animation {
-      animation-name: menu-rotate-and-move;
-      animation-duration: 1.2s;
-      animation-fill-mode: forwards;
+    &_animation,
+    &_animation-ended {
+      transform: translateX(-50.5rem) scale(0.5) rotate(90deg);
 
       .menu__menu-link {
         &:hover {
@@ -24,7 +23,20 @@
             }
           }
         }
+        .menu-link__icon {
+          transform: rotate(-90deg);
+
+          &:hover {
+            transform: rotate(-90deg);
+          }
+        }
       }
+    }
+
+    &_animation {
+      animation-name: menu-rotate-and-move;
+      animation-duration: 1.2s;
+      animation-fill-mode: forwards;
 
       .menu-link__icon {
         animation-name: menu-icons-rotate;
@@ -35,6 +47,10 @@
   }
 
   &__menu {
+    &_animation-ended {
+      height: 20rem;
+    }
+
     &_animation {
       animation-name: menu-minimize;
       animation-duration: 1s;
@@ -44,6 +60,11 @@
   }
 
   &__about {
+    &_animation-ended {
+      opacity: 0;
+      z-index: -1;
+    }
+
     &_animation {
       animation-name: about-hide;
       animation-duration: 0.4s;
@@ -53,6 +74,10 @@
   }
 
   &__header-background-box-container {
+    &_animation-ended {
+      height: 23rem;
+    }
+
     &_animation {
       animation-name: header-collapse;
       animation-duration: 1.2s;
@@ -62,6 +87,12 @@
   }
 
   &__page-title {
+    &_animation-ended {
+      opacity: 1;
+      z-index: 1;
+      width: 101.5rem;
+    }
+
     &_animation {
       animation-name: page-title-show;
       animation-duration: 1s;
