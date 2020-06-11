@@ -10,10 +10,10 @@ const links = [
   'skills',
 ];
 
-const FooterLinks = ({ className, collapseMenu, rotateMenu, setIsMenuCollapseAnimation }) => {
+const FooterLinks = ({ className }) => {
   const renderLinks = () => links.map((link) => (
     <li key={link}>
-      <FooterLink label={link} collapseMenu={collapseMenu} rotateMenu={rotateMenu} className="footer-links__item" setIsMenuCollapseAnimation={setIsMenuCollapseAnimation} />
+      <FooterLink label={link} className="footer-links__item" />
     </li>
   ));
 

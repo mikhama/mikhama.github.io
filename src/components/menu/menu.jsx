@@ -30,10 +30,7 @@ const menuItems = [
 const Menu = ({
   className,
   containerClassName,
-  collapseMenu,
-  rotateMenu,
   activeItem,
-  setIsMenuCollapseAnimation,
 }) => {
   const renderMenuItems = () => menuItems.map((props) => {
     const classes = `menu__menu-link${activeItem === props.label ? ' menu__menu-link_active' : ''}`;
@@ -43,9 +40,6 @@ const Menu = ({
         {...props}
         key={props.label}
         className={classes}
-        collapseMenu={collapseMenu}
-        rotateMenu={rotateMenu}
-        setIsMenuCollapseAnimation={setIsMenuCollapseAnimation}
       />
     );
   });

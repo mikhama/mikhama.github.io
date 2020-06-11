@@ -1,0 +1,49 @@
+@import 'src/styles/index.scss';
+
+.menu {
+  background: $color-menu-backround;
+  height: 50rem;
+  border-top: 0.5rem solid $color-menu-border;
+  border-bottom: 0.5rem solid $color-menu-border;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__container {
+    display: flex;
+    width: 14.6rem * 2 + 4rem;
+    flex-wrap: wrap;
+    transform: rotate(45deg);
+
+    &_collapsed {
+      transform: translateX(-50.5rem) scale(0.5) rotate(90deg);
+
+      .menu__menu-link {
+        &:hover {
+          transform: none;
+          box-shadow: none;
+
+          .menu-link__hidden-name {
+            opacity: 0;
+
+            &::after {
+              visibility: hidden;
+            }
+
+            &::before {
+              visibility: hidden;
+            }
+          }
+        }
+        .menu-link__icon {
+          transform: rotate(-90deg);
+
+          &:hover {
+            transform: rotate(-90deg);
+          }
+        }
+      }
+    }
+  }
+}

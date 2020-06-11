@@ -1,0 +1,30 @@
+@import 'src/styles/index.scss';
+
+.header {
+  &__background-box {
+    background-color: $color-mine-shaft;
+    background-image: url("me.jpg");
+  }
+
+  &__background-box-container {
+    height: 116rem;
+
+    &_collapsed {
+      height: 23rem;
+    }
+  }
+
+  &__menu {
+    &_collapsed {
+      height: 20rem;
+    }
+  }
+
+  &__page-title {
+    &_collapsed {
+      opacity: 1;
+      z-index: 1;
+      width: 101.5rem;
+    }
+  }
+}

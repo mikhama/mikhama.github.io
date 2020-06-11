@@ -4,8 +4,6 @@
   &__menu-container {
     &_animation,
     &_animation-ended {
-      // transform: translateX(-50.5rem) scale(0.5) rotate(90deg);
-
       .menu__menu-link {
         &:hover {
           transform: none;
