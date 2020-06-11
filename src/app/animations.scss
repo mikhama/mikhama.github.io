@@ -4,7 +4,7 @@
   &__menu-container {
     &_animation,
     &_animation-ended {
-      transform: translateX(-50.5rem) scale(0.5) rotate(90deg);
+      // transform: translateX(-50.5rem) scale(0.5) rotate(90deg);
 
       .menu__menu-link {
         &:hover {
@@ -33,13 +33,35 @@
       }
     }
 
+    @for $i from 1 through 4 {
+      &_animation-#{$i * 90} {
+        animation-name: menu-rotate-and-move-#{$i * 90};
+
+        .menu-link__icon {
+          animation-name: menu-icons-rotate-#{$i * 90};
+        }
+      }
+
+      &_animation-#{$i * 90}-ended {
+        transform: translateX(-50.5rem) scale(0.5) rotate(#{$i * 90}deg);
+
+        .menu__menu-link {
+          .menu-link__icon {
+            transform: rotate(-#{$i * 90}deg);
+
+            &:hover {
+              transform: rotate(-#{$i * 90}deg);
+            }
+          }
+        }
+      }
+    }
+
     &_animation {
-      animation-name: menu-rotate-and-move;
       animation-duration: 1.2s;
       animation-fill-mode: forwards;
 
       .menu-link__icon {
-        animation-name: menu-icons-rotate;
         animation-duration: 1.2s;
         animation-fill-mode: forwards;
       }

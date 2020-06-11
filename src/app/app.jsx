@@ -16,11 +16,21 @@ const scrollToTop = () => {
 
 const App = () => {
   const [isMenuCollapseAnimation, setIsMenuCollapseAnimation] = useState(false);
-  const [activeMenuItem, setActiveMenuItem] = useState(null);
+  const [activeMenuItem, setActiveMenuItem] = useState(null); // TODO
+  const [menuIconsDegree, setMenuIconsDegree] = useState(null); // TODO
 
-  const collapseMenu = async (selectedItem) => {
+  const [animationPhase, setAnimationPhase] = useState('menu-rotate');
+  const [isAnimation, setIsAnimation] = useState(false);
+
+  const collapseMenu = (selectedItem) => {
     setIsMenuCollapseAnimation(true);
     setTimeout(scrollToTop, 1200);
+    setActiveMenuItem(selectedItem);
+  };
+
+  const rotateMenu = (selectedItem) => {
+    setIsAnimation(true);
+    console.log('ROTATE', selectedItem);
     setActiveMenuItem(selectedItem);
   };
 
@@ -30,14 +40,21 @@ const App = () => {
         <Header
           isMenuCollapseAnimation={isMenuCollapseAnimation}
           collapseMenu={collapseMenu}
+          rotateMenu={rotateMenu}
+          animationPhase={animationPhase}
+          isAnimation={isAnimation}
           activeMenuItem={activeMenuItem}
           setIsMenuCollapseAnimation={setIsMenuCollapseAnimation}
+          menuIconsDegree={menuIconsDegree}
+          setActiveMenuItem={setActiveMenuItem}
+          setMenuIconsDegree={setMenuIconsDegree}
         />
         <Switch>
           <Route path="/skills" component={Skills} />
         </Switch>
         <Footer
           collapseMenu={collapseMenu}
+          rotateMenu={rotateMenu}
           setIsMenuCollapseAnimation={setIsMenuCollapseAnimation}
         />
       </BrowserRouter>

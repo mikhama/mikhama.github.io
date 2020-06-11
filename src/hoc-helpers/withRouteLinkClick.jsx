@@ -4,6 +4,7 @@ const withRouteLinkClick = (Component) => (props) => {
   const {
     history,
     collapseMenu,
+    rotateMenu,
     label,
     setIsMenuCollapseAnimation,
   } = props;
@@ -17,6 +18,8 @@ const withRouteLinkClick = (Component) => (props) => {
   const handleOnClick = (event) => {
     if (isMenuCollapsed || isPathFromEqualPathTo || isPathToEqualRoot) {
       setIsMenuCollapseAnimation(false);
+      rotateMenu(label);
+
       return;
     }
 

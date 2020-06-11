@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { withRouter } from 'react-router-dom';
 
 import Menu from '../menu';
@@ -13,10 +13,15 @@ const Header = (props) => {
     activeMenuItem,
     history,
     classNames,
+    setActiveMenuItem,
   } = props;
 
   const isMenuCollapsed = history.location.pathname !== '/';
   const activeItem = history.location.pathname.slice(1) || activeMenuItem;
+
+  useEffect(() => {
+    setActiveMenuItem(activeItem);
+  }, [activeItem]);
 
   const about = !isMenuCollapsed
     ? (

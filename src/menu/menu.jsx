@@ -31,18 +31,24 @@ const Menu = ({
   className,
   containerClassName,
   collapseMenu,
+  rotateMenu,
   activeItem,
   setIsMenuCollapseAnimation,
 }) => {
-  const renderMenuItems = () => menuItems.map((props) => (
-    <MenuLink
-      {...props}
-      key={props.label}
-      className={`menu__menu-link${activeItem === props.label ? ' menu__menu-link_active' : ''}`}
-      collapseMenu={collapseMenu}
-      setIsMenuCollapseAnimation={setIsMenuCollapseAnimation}
-    />
-  ));
+  const renderMenuItems = () => menuItems.map((props) => {
+    const classes = `menu__menu-link${activeItem === props.label ? ' menu__menu-link_active' : ''}`;
+
+    return (
+      <MenuLink
+        {...props}
+        key={props.label}
+        className={classes}
+        collapseMenu={collapseMenu}
+        rotateMenu={rotateMenu}
+        setIsMenuCollapseAnimation={setIsMenuCollapseAnimation}
+      />
+    );
+  });
 
   return (
     <nav className={`${className} menu`}>
