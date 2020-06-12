@@ -1,17 +1,57 @@
 @import 'src/styles/index.scss';
 
 .article {
-  h3 {
+  &__heading {
     font-size: 3rem;
     font-weight: 700;
     margin: 0;
     margin-bottom: 3rem;
+
+    &_with-sub-heading {
+      margin-bottom: 1rem;
+    }
   }
 
-  p {
+  &__sub-heading {
+    margin-top: 0;
+    margin-bottom: 3rem;
+    color: $color-article-sub-heading;
+    font-size: 1.9rem;
+  }
+
+  &__paragraph {
     font-size: 2rem;
     line-height: 3.5rem;
     margin: 0;
     margin-bottom: 4rem;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    font-size: 2rem;
+    line-height: 3.5rem;
+    margin: 0;
+    margin-bottom: 4rem;
+  }
+
+  &__text {
+    &_bold {
+      font-weight: 700;
+    }
+  }
+
+  &__link {
+    color: $color-brand;
+  }
+
+  &__picture {
+    margin-bottom: 4rem !important;
+  }
+}
+
+.article-heading {
+  &__sub-text {
+    font-size: 2.2rem;
   }
 }

@@ -8,10 +8,11 @@ const FooterLink = ({
 }) => {
   const { pathname } = location;
 
-  const activeLinkClassName = pathname === `/${label}` ? 'footer-links__item_active' : '';
+  const path = label === 'about' ? '/' : `/${label}`;
+  const activeLinkClassName = pathname === path ? 'footer-links__item_active' : '';
 
   return (
-    <Link className={`${className} ${activeLinkClassName}`} to={`/${label}`}>
+    <Link className={`${className} ${activeLinkClassName}`} to={path}>
       #
       {label}
     </Link>

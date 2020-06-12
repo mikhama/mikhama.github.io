@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Article = ({ children }) => (
-  <article className="article">
+const Article = ({ children, className }) => (
+  <article className={`${className} article`}>
     {children}
   </article>
 );
