@@ -1,4 +1,5 @@
 import About from './about';
+import AnimationSwitcher from './animation-switcher';
 import Article from './article';
 import BackgroudBox from './background-box';
 import Footer from './footer';
@@ -16,6 +17,7 @@ import Tags from './tags';
 
 export {
   About,
+  AnimationSwitcher,
   Article,
   BackgroudBox,
   Footer,

@@ -27,18 +27,21 @@ const menuItems = [
   },
 ];
 
-const Menu = ({
-  className,
-  containerClassName,
-  activeItem,
-}) => {
-  const renderMenuItems = () => menuItems.map((props) => {
-    const classes = `menu__menu-link${activeItem === props.label ? ' menu__menu-link_active' : ''}`;
+const Menu = (props) => {
+  const {
+    className,
+    containerClassName,
+    activeItem,
+  } = props;
+
+  const renderMenuItems = () => menuItems.map((item) => {
+    const classes = `menu__menu-link${activeItem === item.label ? ' menu__menu-link_active' : ''}`;
 
     return (
       <MenuLink
         {...props}
-        key={props.label}
+        {...item}
+        key={item.label}
         className={classes}
       />
     );

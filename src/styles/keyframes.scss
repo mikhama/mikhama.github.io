@@ -15,53 +15,53 @@
   100% { transform: rotate(-360deg); }
 }
 
-// @keyframes menu-minimize {
-//   0% { height: 50rem; }
-//   100% { height: 20rem; }
-// }
+@keyframes menu-minimize {
+  0% { height: 50rem; }
+  100% { height: 20rem; }
+}
 
-// @mixin keyframes-menu-rotate-and-move($name, $finalRotationDegree) {
-//   @keyframes #{$name} {
-//     0% { transform: rotate(45deg); }
-//     25% { transform: rotate(0deg); }
-//     50% { transform: translateX(-50.5rem); }
-//     75% { transform: translateX(-50.5rem) scale(0.5); }
-//     100% { transform: translateX(-50.5rem) scale(0.5) rotate(#{$finalRotationDegree}deg); }
-//   }
-// }
+@mixin keyframes-menu-rotate-and-move($name, $finalRotationDegree) {
+  @keyframes #{$name} {
+    0% { transform: rotate(45deg); }
+    25% { transform: rotate(0deg); }
+    50% { transform: translateX(-50.5rem); }
+    75% { transform: translateX(-50.5rem) scale(0.5); }
+    100% { transform: translateX(-50.5rem) scale(0.5) rotate(#{$finalRotationDegree}deg); }
+  }
+}
 
-// @include keyframes-menu-rotate-and-move(menu-rotate-and-move-90, 90);   // skills
-// @include keyframes-menu-rotate-and-move(menu-rotate-and-move-180, 180); // experience
-// @include keyframes-menu-rotate-and-move(menu-rotate-and-move-270, 270); // education
-// @include keyframes-menu-rotate-and-move(menu-rotate-and-move-360, 360); // portfolio
+@include keyframes-menu-rotate-and-move(menu-rotate-and-move-90, 90);   // skills
+@include keyframes-menu-rotate-and-move(menu-rotate-and-move-180, 180); // experience
+@include keyframes-menu-rotate-and-move(menu-rotate-and-move-270, 270); // education
+@include keyframes-menu-rotate-and-move(menu-rotate-and-move-360, 360); // portfolio
 
-// @mixin keyframes-menu-icons-rotate($name, $finalRotationDegree) {
-//   @keyframes #{$name} {
-//     0% { transform: rotate(-45deg); }
-//     25% { transform: rotate(0deg); }
-//     50% { transform: rotate(0deg); }
-//     75% { transform: rotate(0deg); }
-//     100% { transform: rotate(-#{$finalRotationDegree}deg); }
-//   }
-// }
+@mixin keyframes-menu-icons-rotate($name, $finalRotationDegree) {
+  @keyframes #{$name} {
+    0% { transform: rotate(-45deg); }
+    25% { transform: rotate(0deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(0deg); }
+    100% { transform: rotate(-#{$finalRotationDegree}deg); }
+  }
+}
 
-// @include keyframes-menu-icons-rotate(menu-icons-rotate-90, 90);   // skills
-// @include keyframes-menu-icons-rotate(menu-icons-rotate-180, 180); // experience
-// @include keyframes-menu-icons-rotate(menu-icons-rotate-270, 270); // education
-// @include keyframes-menu-icons-rotate(menu-icons-rotate-360, 360); // portfolio
+@include keyframes-menu-icons-rotate(menu-icons-rotate-90, 90);   // skills
+@include keyframes-menu-icons-rotate(menu-icons-rotate-180, 180); // experience
+@include keyframes-menu-icons-rotate(menu-icons-rotate-270, 270); // education
+@include keyframes-menu-icons-rotate(menu-icons-rotate-360, 360); // portfolio
 
-// @keyframes about-hide {
-//   0% { opacity: 1; z-index: 1; }
-//   100% { opacity: 0; z-index: -1; }
-// }
+@keyframes about-hide {
+  0% { opacity: 1; z-index: 1; }
+  100% { opacity: 0; z-index: -1; }
+}
 
-// @keyframes header-collapse {
-//   0% { height: 116rem; }
-//   100% { height: 23rem; }
-// }
+@keyframes header-collapse {
+  0% { height: 116rem; }
+  100% { height: 23rem; }
+}
 
-// @keyframes page-title-show {
-//   0% { opacity: 0; z-index: -1; }
-//   100% { opacity: 1; z-index: 1; width: 101.5rem; }
-// }
+@keyframes page-title-show {
+  0% { opacity: 0; z-index: -1; }
+  100% { opacity: 1; z-index: 1; width: 101.5rem; }
+}
 

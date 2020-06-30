@@ -7,4 +7,9 @@
   font-family: $font-family-logo;
   font-size: 8.8rem;
   height: fit-content;
+
+  a {
+    text-decoration: none;
+    color: $color-brand;
+  }
 }

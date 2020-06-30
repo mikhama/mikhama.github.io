@@ -10,10 +10,14 @@ const links = [
   'skills',
 ];
 
-const FooterLinks = ({ className }) => {
+const FooterLinks = ({ className, ...props }) => {
   const renderLinks = () => links.map((link) => (
     <li key={link}>
-      <FooterLink label={link} className="footer-links__item" />
+      <FooterLink
+        {...props}
+        label={link}
+        className="footer-links__item"
+      />
     </li>
   ));
 

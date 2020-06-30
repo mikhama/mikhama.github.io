@@ -1,19 +1,27 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import { compose, withRouterLinkClick } from '../../hoc-helpers';
 
 const MenuLink = ({
   className,
   icon,
   label,
-}) => (
-  <Link
-    className={`${className} menu-link`}
-    to={`/${label}`}
-  >
-    <FontAwesomeIcon className="menu-link__icon" icon={icon} />
-    <span className="menu-link__hidden-name">{ label }</span>
-  </Link>
-);
+  onLinkClick,
+}) => {
+  const page = `/${label}`;
 
-export default MenuLink;
+  return (
+    <Link
+      className={`${className} menu-link`}
+      to={page}
+      onClick={onLinkClick}
+    >
+      <FontAwesomeIcon className="menu-link__icon" icon={icon} />
+      <span className="menu-link__hidden-name">{label}</span>
+    </Link>
+  );
+};
+
+export default compose(withRouterLinkClick, withRouter)(MenuLink);

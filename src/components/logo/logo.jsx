@@ -1,7 +1,17 @@
 import React from 'react';
+import { withRouter, Link } from 'react-router-dom';
 
-const Logo = ({ className }) => (
-  <h1 className={`${className} logo`}>mikhama.art</h1>
+import { compose, withRouterLinkClick } from '../../hoc-helpers';
+
+const Logo = ({ className, onLinkClick }) => (
+  <h1 className={`${className} logo`}>
+    <Link
+      to="/"
+      onClick={onLinkClick}
+    >
+      mikhama.art
+    </Link>
+  </h1>
 );
 
-export default Logo;
+export default compose(withRouterLinkClick, withRouter)(Logo);

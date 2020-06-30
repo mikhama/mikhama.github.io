@@ -1,10 +1,13 @@
 import React from 'react';
 import { withRouter, Link } from 'react-router-dom';
 
+import { compose, withRouterLinkClick } from '../../hoc-helpers';
+
 const FooterLink = ({
   label,
   className,
   location,
+  onLinkClick,
 }) => {
   const { pathname } = location;
 
@@ -12,11 +15,15 @@ const FooterLink = ({
   const activeLinkClassName = pathname === path ? 'footer-links__item_active' : '';
 
   return (
-    <Link className={`${className} ${activeLinkClassName}`} to={path}>
+    <Link
+      className={`${className} ${activeLinkClassName}`}
+      to={path}
+      onClick={onLinkClick}
+    >
       #
       {label}
     </Link>
   );
 };
 
-export default withRouter(FooterLink);
+export default compose(withRouterLinkClick, withRouter)(FooterLink);

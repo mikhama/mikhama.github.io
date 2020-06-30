@@ -14,6 +14,17 @@
     }
   }
 
+  &__column {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__animation-switcher {
+    align-self: flex-end;
+    margin-top: 6.5rem;
+    margin-bottom: 14rem;
+  }
+
   &__menu {
     &_collapsed {
       height: 20rem;

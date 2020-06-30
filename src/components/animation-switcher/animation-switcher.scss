@@ -1,0 +1,41 @@
+@import 'src/styles/index.scss';
+
+.animation-switcher {
+  cursor: pointer;
+  box-sizing: content-box;
+  color: $color-animation-switcher-icon;
+  padding: 0;
+  height: 8rem;
+  font-size: 3rem;
+  width: 8rem;
+  border: 0.5rem solid $color-brand;
+  border-radius: 50%;
+
+  &__icon-wrapper {
+    display: inline-block;
+    height: 8rem;
+    width: 4rem;
+    line-height: 8rem;
+    border: 0;
+    background: $color-animation-switcher-background;
+    transition: background 0.5s ease-in;
+
+    &:first-child {
+      border-radius: 100% 0 0 100% / 50% 0 0 50%;
+    }
+
+    &:last-child {
+      border-radius: 0 100% 100% 0 / 0 50% 50% 0;
+    }
+
+    &_active {
+      background: $color-brand;
+      color: $color-animation-switcher-icon-active;
+      transition: background 0.5s ease-in;
+    }
+  }
+
+  &__icon {
+    width: 3rem !important;
+  }
+}
