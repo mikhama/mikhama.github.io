@@ -1,14 +1,13 @@
 import React from 'react';
 
 import {
-  PageContainer,
   Article,
   Tags,
 } from '../../components';
 
 const Skills = () => (
-  <PageContainer>
-    <Article className="page-container__article page-container__article_single">
+  <>
+    <Article className="main__article main__article_single">
       <h3 className="article__heading article-heading">Never stop learning</h3>
       <p className="article__paragraph">
         Nulla a dui nec lectus cursus luctus. Sed aliquam vehicula lacus et varius.
@@ -23,7 +22,7 @@ const Skills = () => (
       majorTags={['javascript', 'react', 'nodejs', 'aws']}
       regularTags={['corejs', 'ecmascript', 'typescript', 'serverless', 'html', 'css', 'scrum', 'kanban']}
     />
-  </PageContainer>
+  </>
 );
 
 export default Skills;

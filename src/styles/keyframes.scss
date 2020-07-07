@@ -65,3 +65,32 @@
   100% { opacity: 1; z-index: 1; width: 101.5rem; }
 }
 
+@keyframes main-container-show {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+  50% {
+    opacity: 0;
+    height: auto;
+  }
+  100% {
+    opacity: 1;
+    height: auto;
+  }
+}
+
+@keyframes main-show {
+  0% {
+    padding: 0;
+    border-bottom: 0rem solid $color-menu-border;
+  }
+  50% {
+    padding: 0;
+    border-bottom: 0.5rem solid $color-menu-border;
+  }
+  100% {
+    padding: 12rem 14rem;
+    border-bottom: 0.5rem solid $color-menu-border;
+  }
+}

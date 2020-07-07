@@ -2,7 +2,6 @@ import React from 'react';
 
 import {
   InteractivePicture,
-  PageContainer,
   Article,
   Tags,
 } from '../../components';
@@ -13,8 +12,8 @@ import * as harryPotterWebmSrc from '../../img/harry-potter.webm';
 import * as harryPotterGifSrc from '../../img/harry-potter.gif';
 
 const Portfolio = () => (
-  <PageContainer>
-    <Article className="page-container__article">
+  <>
+    <Article className="main__article">
       <h3 className="article__heading article-heading">
         Youtube Client
       </h3>
@@ -34,7 +33,7 @@ const Portfolio = () => (
         regularTags={['javascript', 'youtube-api', 'html', 'css']}
       />
     </Article>
-    <Article className="page-container__article">
+    <Article className="main__article">
       <h3 className="article__heading article-heading">
         Harry Potter and the Battle for Hogwarts
       </h3>
@@ -54,7 +53,7 @@ const Portfolio = () => (
         regularTags={['javascript', 'canvas', 'html', 'css', 'scss']}
       />
     </Article>
-  </PageContainer>
+  </>
 );
 
 export default Portfolio;

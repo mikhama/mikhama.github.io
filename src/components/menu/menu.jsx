@@ -8,40 +8,30 @@ import {
 
 import MenuLink from '../menu-link';
 
-const menuItems = [
-  {
-    icon: faCodeBranch,
-    label: 'experience',
-  },
-  {
-    icon: faBrain,
-    label: 'skills',
-  },
-  {
-    icon: faGraduationCap,
-    label: 'education',
-  },
-  {
-    icon: faPuzzlePiece,
-    label: 'portfolio',
-  },
-];
+const itemsIcons = {
+  experience: faCodeBranch,
+  skills: faBrain,
+  education: faGraduationCap,
+  portfolio: faPuzzlePiece,
+};
 
 const Menu = (props) => {
   const {
     className,
     containerClassName,
     activeItem,
+    items,
   } = props;
 
-  const renderMenuItems = () => menuItems.map((item) => {
-    const classes = `menu__menu-link${activeItem === item.label ? ' menu__menu-link_active' : ''}`;
+  const renderMenuItems = () => items.map((label) => {
+    const classes = `menu__menu-link${activeItem === label ? ' menu__menu-link_active' : ''}`;
 
     return (
       <MenuLink
         {...props}
-        {...item}
-        key={item.label}
+        label={label}
+        icon={itemsIcons[label]}
+        key={label}
         className={classes}
       />
     );

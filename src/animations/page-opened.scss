@@ -1,0 +1,36 @@
+@import 'src/styles/index.scss';
+
+.app {
+  &__main {
+    padding: 0;
+    border-bottom: none;
+
+    &_page-opened-animation {
+      animation-name: main-show;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+    }
+
+    &_animation-disabled {
+      padding: 12rem 14rem;
+      border-bottom: 0.5rem solid $color-menu-border;
+    }
+  }
+
+  &__main-container {
+    height: 0;
+    opacity: 0;
+
+    &_page-opened-animation {
+      animation-name: main-container-show;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+      animation-delay: 0.5s;
+    }
+
+    &_animation-disabled {
+      opacity: 1;
+      height: auto;
+    }
+  }
+}

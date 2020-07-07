@@ -8,6 +8,7 @@ import FooterLinks from './footer-links';
 import Header from './header';
 import InteractivePicture from './interactive-picture';
 import Logo from './logo';
+import Main from './main';
 import Menu from './menu';
 import MenuLink from './menu-link';
 import PageContainer from './page-container';
@@ -26,6 +27,7 @@ export {
   Header,
   InteractivePicture,
   Logo,
+  Main,
   Menu,
   MenuLink,
   PageContainer,

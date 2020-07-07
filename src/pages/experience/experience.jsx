@@ -1,13 +1,12 @@
 import React from 'react';
 
 import {
-  PageContainer,
   Article,
 } from '../../components';
 
 const Experience = () => (
-  <PageContainer>
-    <Article className="page-container__article">
+  <>
+    <Article className="main__article">
       <h3 className="article__heading article__heading_with-sub-heading article-heading">
         <a className="article__link" href="">Software Engineer</a>
         {' '}
@@ -26,7 +25,7 @@ const Experience = () => (
         Mauris in nunc vitae ex efficitur dignissim et non ante.
       </p>
     </Article>
-    <Article className="page-container__article">
+    <Article className="main__article">
       <h3 className="article__heading article__heading_with-sub-heading article-heading">
         <a className="article__link" href="">Engineer</a>
         {' '}
@@ -45,7 +44,7 @@ const Experience = () => (
         Mauris in nunc vitae ex efficitur dignissim et non ante.
       </p>
     </Article>
-  </PageContainer>
+  </>
 );
 
 export default Experience;

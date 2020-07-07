@@ -1,0 +1,17 @@
+@import 'src/styles/index.scss';
+
+.main {
+  background: $color-black;
+  padding: 12rem 14rem;
+  border-bottom: 0.5rem solid $color-menu-border;
+
+  &__article {
+    &:not(:last-child) {
+      margin-bottom: 15rem;
+    }
+
+    &_single {
+      margin-bottom: 0rem !important;
+    }
+  }
+}

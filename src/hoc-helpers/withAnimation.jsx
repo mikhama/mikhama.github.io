@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { toKebabCase } from '../utils';
+import { toKebabCase, getAnimationType } from '../utils';
 
 const withAnimation = (Component) => (props) => {
   const {
@@ -15,6 +15,8 @@ const withAnimation = (Component) => (props) => {
     menuContainer: '',
     pageTitle: '',
     backgroundBoxContainer: '',
+    mainContainer: '',
+    main: '',
   };
 
   if (!isAnimationEnabled) {
@@ -25,20 +27,7 @@ const withAnimation = (Component) => (props) => {
 
   const { pathname } = location;
 
-  const isFromPathRoot = pathname === '/';
-  const isToPathRoot = activePage === '/';
-  const isFromEqualsTo = pathname === activePage || activePage === null;
-
-  let animationType = '';
-  if (isFromPathRoot && !isToPathRoot) {
-    animationType = 'root-to-page';
-  } else if (!isFromPathRoot && !isToPathRoot && !isFromEqualsTo) {
-    animationType = 'page-to-page';
-  } else if (!isFromPathRoot && isToPathRoot) {
-    animationType = 'page-to-root';
-  } else if (!isFromPathRoot && !isToPathRoot && isFromEqualsTo) {
-    animationType = 'page-opened';
-  }
+  const animationType = getAnimationType(pathname, activePage);
 
   const items = [
     {

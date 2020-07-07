@@ -1,13 +1,12 @@
 import React from 'react';
 
 import {
-  PageContainer,
   Article,
 } from '../../components';
 
 const Education = () => (
-  <PageContainer>
-    <Article className="page-container__article">
+  <>
+    <Article className="main__article">
       <h3 className="article__heading article__heading_with-sub-heading article-heading">
         <a className="article__link" href="">Rolling Scopes School</a>
         {' '}
@@ -24,7 +23,7 @@ const Education = () => (
         <a className="article__link" href="">View certificate</a>
       </p>
     </Article>
-    <Article className="page-container__article">
+    <Article className="main__article">
       <h3 className="article__heading article__heading_with-sub-heading article-heading">
         <a className="article__link" href="">BSUIR</a>
         {' '}
@@ -60,7 +59,7 @@ const Education = () => (
         </li>
       </ul>
     </Article>
-    <Article className="page-container__article">
+    <Article className="main__article">
       <h3 className="article__heading article__heading_with-sub-heading article-heading">
         <a className="article__link" href="">MRC-BSUIR (ex MHSRC)</a>
         {' '}
@@ -96,7 +95,7 @@ const Education = () => (
         </li>
       </ul>
     </Article>
-  </PageContainer>
+  </>
 );
 
 export default Education;

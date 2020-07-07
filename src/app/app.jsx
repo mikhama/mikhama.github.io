@@ -1,17 +1,12 @@
 import React, { useState } from 'react';
-import { Switch, BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 
-import { Header, Footer } from '../components';
-import {
-  Skills,
-  Education,
-  Experience,
-  Portfolio,
-} from '../pages';
+import { Header, Footer, Main } from '../components';
 
 const App = () => {
   const [isAnimationEnabled, setIsAnimationEnabled] = useState(true);
   const [activePage, setActivePage] = useState(null);
+  const [items, setItems] = useState(['experience', 'skills', 'education', 'portfolio']);
 
   const toggleAnimation = () => setIsAnimationEnabled((state) => !state);
 
@@ -23,20 +18,18 @@ const App = () => {
           activePage={activePage}
           toggleAnimation={toggleAnimation}
           setActivePage={setActivePage}
+          setItems={setItems}
+          items={items}
         />
-        <Switch>
-          <Route path="/skills" component={Skills} />
-          <Route path="/education" component={Education} />
-          <Route path="/experience" component={Experience} />
-          <Route path="/portfolio" component={Portfolio} />
-        </Switch>
+        <Main isAnimationEnabled={isAnimationEnabled} activePage={activePage} />
         <Footer
           isAnimationEnabled={isAnimationEnabled}
+          setItems={setItems}
           setActivePage={setActivePage}
         />
       </BrowserRouter>
     </div>
-  )
+  );
 };
 
 export default App;
