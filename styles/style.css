@@ -1,0 +1,223 @@
+body {
+  max-width: 1024px;
+  margin: 0 auto;
+  background: url("../images/glitch.jpg");
+}
+
+main {
+  max-width: 740px;
+  margin: 48px auto;
+  background: url("../images/exclusive_paper.jpg");
+  border-radius: 24px;
+  box-shadow: 0 0 16px rgb(31, 31, 31);
+}
+
+a {
+  color: #3e88c4;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #fe5473;
+  text-shadow: 2px 0 1px rgba(66, 66, 66, 0.13);
+}
+
+time {
+  font-weight: 700;
+  color: #f1143c;
+}
+
+.block {
+  padding: 48px;
+  font-family: "Signika Negative", "Trebuchet MS", sans-serif;
+}
+
+.block p:not(.vacancy) {
+  font-size: 14pt;
+  line-height: 1.3em;
+  text-align: justify;
+  color: #696868;
+}
+
+.block p:not(.no-first-letter)::first-letter {
+  display: block;
+  float: left;
+  padding-right: 16px;
+  font-weight: 400;
+  font-size: 48pt;
+  line-height: 1em;
+  font-family: "Rubik Mono One", "Arial Black", sans-serif;
+  color: #f1143c;
+}
+
+.block p.small-first-letter::first-letter {
+  font-size: 24pt;
+}
+
+.heading {
+  font-weight: 400;
+  font-family: "Rubik Mono One", "Arial Black", sans-serif;
+  text-transform: uppercase;
+}
+
+.heading:not(h1) {
+  padding-left: 48px;
+  color: white;
+  background: url("../images/glitch.jpg") 155px 20px;
+  text-shadow: 0 0 1px black, 2px 3px 1px #f1143c;
+}
+
+.icon {
+  position: relative;
+  display: inline-block;
+  height: 48px;
+  margin-left: 48px;
+  padding: 0 12px;
+  line-height: 48px;
+  font-weight: 700;
+}
+
+.icon::before {
+  position: absolute;
+  left: -48px;
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  content: " ";
+}
+
+.icon.phone::before {
+  background: url("../images/phone.png");
+  background-size: cover;
+}
+
+.icon.email::before {
+  background: url("../images/email.png");
+  background-size: cover;
+}
+
+.icon.website::before {
+  background: url("../images/website.png");
+  background-size: cover;
+}
+
+.icon.github::before {
+  background: url("../images/github.png");
+  background-size: cover;
+}
+
+.icon.linkedin::before {
+  background: url("../images/linkedin.png");
+  background-size: cover;
+}
+
+.icon.js::before {
+  background: url("../images/js.png");
+  background-size: cover;
+}
+
+.icon.react::before {
+  background: url("../images/react.png");
+  background-size: cover;
+}
+
+.icon.aws::before {
+  background: url("../images/aws.png");
+  background-size: cover;
+}
+
+.icon.nodejs::before {
+  background: url("../images/nodejs.png");
+  background-size: cover;
+}
+.icon.html::before {
+  background: url("../images/html.png");
+  background-size: cover;
+}
+
+.icon.css::before {
+  background: url("../images/css.png");
+  background-size: cover;
+}
+
+.icon.git::before {
+  background: url("../images/git.png");
+  background-size: cover;
+}
+
+.icon.console::before {
+  background: url("../images/console.png");
+  background-size: cover;
+}
+
+.candidate {
+  text-align: center;
+}
+
+.candidate .avatar {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  box-shadow: 0 0 8px rgb(31, 31, 31);
+}
+
+.candidate .heading {
+  margin-bottom: 0;
+  color: rgb(18, 175, 136);
+  text-shadow: 0 0 1px rgba(255, 255, 255, 0.836), 4px 4px 1px rgba(68, 68, 68, 0.247);
+}
+
+.candidate .vacancy {
+  margin: 8px auto;
+  font-weight: 700;
+  font-size: 18pt;
+}
+
+.candidate .contacts,
+.skills .skills-icons,
+.list {
+  list-style: none;
+}
+
+.candidate .contacts {
+  display: flex;
+  flex-flow: column;
+  margin: 56px 0 0;
+  padding: 0;
+  text-align: left;
+}
+
+.candidate .contacts .icon {
+  margin-bottom: 8px;
+}
+
+.skills .icon {
+  width: 70px;
+  padding: 14px;
+}
+
+.list {
+  padding: 0;
+  font-size: 14pt;
+  line-height: 1.5em;
+  color: #696868;
+}
+
+.list .list-item {
+  margin-top: 36px;
+}
+
+.list .sub-list {
+  list-style: square;
+}
+
+.block p.item-title {
+  color: #303030;
+  font-weight: 700;
+  margin-bottom: 0;
+  font-size: 18pt;
+}
+
+.block p.item-details {
+  margin-top: 0;
+}
