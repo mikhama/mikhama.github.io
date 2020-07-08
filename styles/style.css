@@ -50,10 +50,6 @@ time {
   color: #f1143c;
 }
 
-.block p.small-first-letter::first-letter {
-  font-size: 24pt;
-}
-
 .heading {
   font-weight: 400;
   font-family: "Rubik Mono One", "Arial Black", sans-serif;
@@ -161,6 +157,10 @@ time {
   box-shadow: 0 0 8px rgb(31, 31, 31);
 }
 
+.candidate .avatar.sketch {
+  display: none;
+}
+
 .candidate .heading {
   margin-bottom: 0;
   color: rgb(18, 175, 136);
@@ -168,7 +168,7 @@ time {
 }
 
 .candidate .vacancy {
-  margin: 8px auto;
+  margin: 8px auto 56px;
   font-weight: 700;
   font-size: 18pt;
 }
@@ -182,7 +182,6 @@ time {
 .candidate .contacts {
   display: flex;
   flex-flow: column;
-  margin: 56px 0 0;
   padding: 0;
   text-align: left;
 }
@@ -220,4 +219,8 @@ time {
 
 .block p.item-details {
   margin-top: 0;
+}
+
+.skill-tags {
+  display: none;
 }

@@ -8,30 +8,44 @@
   <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Signika+Negative:400,700">
   <link rel="stylesheet" href="styles/normalize.css">
-  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" media="screen" href="styles/style.css">
+  <link rel="stylesheet" media="print" href="styles/print.css">
   <base target="_blank">
 </head>
 <body>
   <main>
     <article class="block candidate">
-      <img class="avatar" src="images/avatar.jpg" alt="I am on the photo" width="300" height="300">
+      <img class="avatar normal" src="images/avatar.jpg" alt="Dzmitry Tsebruk" width="300" height="300" />
+      <img class="avatar sketch" src="images/avatar-sketch.jpg" alt="Dzmitry Tsebruk" width="300" height="300" />
       <h1 class="heading">Dzmitry Tsebruk</h1>
       <p class="vacancy no-first-letter">JavaScript Engineer</p>
-      <ul class="contacts">
-        <li class="icon phone">Phone: <a href="tel://+375-29-527-14-81">+375 (29) 527-14-81</a></li>
-        <li class="icon email">Email: <a href="mailto:mikhama@tut.by">mikhama@tut.by</a></li>
-        <li class="icon website">Site: <a href="http://mikhama.art/">mikhama.art</a></li>
-        <li class="icon github">Github: <a href="https://github.com/mikhama">github.com/mikhama</a></li>
-        <li class="icon linkedin">LinkedIn: <a href="https://www.linkedin.com/in/mikhama">linkedin.com/in/mikhama</a></li>
-
-      </ul>
+      <div class="details">
+        <ul class="contacts">
+          <li class="icon phone">Phone: <a href="tel://+375-29-527-14-81">+375 (29) 527-14-81</a></li>
+          <li class="icon email">Email: <a href="mailto:mikhama@tut.by">mikhama@tut.by</a></li>
+          <li class="icon website">Site: <a href="http://mikhama.art/">mikhama.art</a></li>
+          <li class="icon github">Github: <a href="https://github.com/mikhama">github.com/mikhama</a></li>
+          <li class="icon linkedin">LinkedIn: <a href="https://www.linkedin.com/in/mikhama">linkedin.com/in/mikhama</a></li>
+        </ul>
+        <ul class="skill-tags">
+          <li>JavaScript</li>
+          <li>React</li>
+          <li>AWS</li>
+          <li>Node.js</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Git</li>
+          <li>*nix CLI</li>
+          <li class="english">English: B1 (Intermediate)</li>
+        </ul>
+      </div>
     </article>
     <article class="block summary">
       <h2 class="heading">Summary</h2>
       <p>
         I am a JavaScript engineer. I would like to apply my technical skills and knowledge in the Front-end Development
         for creating high quality products which will be matching clients expectations. I have good knowledge basement,
-        strong skills and experience, ability learning fast and fulfill objectives. I am constantly improving my skills
+        strong skills and experience, ability learning fast and fulfill objectives. I constantly improve my skills
         and trying to be aware of new trends in IT. I can be effective and helpful for your company.
       </p>
     </article>
@@ -81,40 +95,19 @@
             <b>Belarusfilm</b>, Minsk, Belarus
           </p>
           <p class="no-first-letter">
-            During working at Belarusfilm I worked in various roles: Technical Support Engineer, Sound Technician and Video Engineer.
-          </p>
-          <p class="no-first-letter">
-            As a Technical Support Engineer I was in charge of:
+            I worked in various roles: Technical Support Engineer, Sound Technician and Video Engineer.
+            During working at Belarusfilm I was involved in:
           </p>
           <ul class="sub-list">
-            <li>personal computers and servers maintenance (Windows, Linux, MacOS);</li>
-            <li>network maintenance (Windows, Linux, MacOS);</li>
+            <li>personal computers, servers and network maintenance (Windows, Linux, MacOS);</li>
             <li>replacing hardware and assembling workstations;</li>
             <li>setting up and reinstalling OS and software to working stations;</li>
             <li>helping users resolving program or OS issues.</li>
-          </ul>
-          <p class="no-first-letter">
-            As a Sound Technician I was responsible for:
-          </p>
-          <ul class="sub-list">
-            <li>sound recording, editing and mixing (Pro Tools HD);</li>
-            <li>dialogue recording (ADR);</li>
-            <li>foley recording;</li>
-            <li>field recording;</li>
+            <li>sound recording (ADR, Foley, Field), editing and mixing (Pro Tools HD);</li>
             <li>setup and connecting sound recording equipment (mixers, mics, etc.);</li>
-            <li>maintenance of Mac OS workstations.</li>
-            <li>improving system of storing working projects (created naming convention).</li>
-          </ul>
-          <p class="no-first-letter">
-            As a Video Engineer I have dealt with:
-          </p>
-          <ul class="sub-list">
             <li>video editing (Final Cut Pro X, Adobe Premiere);</li>
             <li>3D graphics, animations and VFX (Blender, Fusion);</li>
-            <li>maintenance of Mac OS workstations;</li>
-            <li>maintenance of servers for storing footage and movies (Linux);</li>
-            <li>maintenance of Blackmagic station for color correction (Linux);</li>
-            <li>improving system of storing footage and movies (created naming convention).</li>
+            <li>improving system of storing working projects (Sound department), footage and movies (created naming conventions).</li>
           </ul>
         </li>
       </ul>
@@ -154,7 +147,6 @@
             <li><b>Faculty:</b> Distance Education</li>
             <li><b>Department:</b> Professional Education (Informatics)</li>
             <li><b>Degree information:</b> Higher (Bachelor)</li>
-            <li><b>Education form:</b> Distant</li>
           </ul>
         </li>
         <li class="list-item state-education">
@@ -164,7 +156,6 @@
             <li><b>Faculty:</b> Programming</li>
             <li><b>Department:</b> Informatics</li>
             <li><b>Degree information:</b> Technical school</li>
-            <li><b>Education form:</b> Full-time</li>
           </ul>
         </li>
       </ul>
@@ -186,7 +177,7 @@
           <ul class="sub-list">
             <li><b>Technologies:</b> JavaScript, HTML, SCSS, Webpack, Canvas, SVG;</li>
             <li><b>Requirements:</b> <a href="https://github.com/rolling-scopes-school/tasks/blob/2018-Q3/tasks/game.md">view</a>;</li>
-            <li><b>Application:</b> <a href="http://mikhama.art/rs-final-game/">view</a>.</li>
+            <li><b>Application:</b> <a href="https://mikhama.art/rs-final-game/">mikhama.art/rs-final-game</a>.</li>
           </ul>
         </li>
         <li class="list-item">
@@ -201,8 +192,8 @@
           </p>
           <ul class="sub-list">
             <li><b>Technologies:</b> JavaScript, Typescript, Node.js, Koa, React, Serverless Framework, AWS, PostgreeSQL;</li>
-            <li><b>Application:</b> <a href="https://app.rs.school">view</a>;</li>
-            <li><b>Repo:</b> <a href="https://github.com/rolling-scopes/rsschool-app">view</a>.</li>
+            <li><b>Application:</b> <a href="https://app.rs.school">app.rs.school</a>;</li>
+            <li><b>Repo:</b> <a href="https://github.com/rolling-scopes/rsschool-app">github.com/rolling-scopes/rsschool-app</a>.</li>
           </ul>
           <p class="no-first-letter">
             My contribution is:
@@ -228,7 +219,7 @@
           </p>
           <ul class="sub-list">
             <li><b>Technologies:</b> JavaScript, Node.js, Travis CI;</li>
-            <li><b>Repo:</b> <a href="https://github.com/mikhama/rs-bumblebee">view</a>.</li>
+            <li><b>Repo:</b> <a href="https://github.com/mikhama/rs-bumblebee">mikhama/rs-bumblebee</a>.</li>
           </ul>
         </li>
         <li class="list-item">
@@ -243,8 +234,8 @@
           </p>
           <ul class="sub-list">
             <li><b>Technologies:</b> JavaScript, HTML, CSS, Webpack;</li>
-            <li><b>Requirements:</b> <a href="https://github.com/rolling-scopes-school/tasks/blob/2018-Q3/tasks/youtube.md">view</a>.</li>
-            <li><b>Application:</b> <a href="http://mikhama.art/youtube-client/">view</a>.</li>
+            <li><b>Requirements:</b> <a href="https://github.com/rolling-scopes-school/tasks/blob/2018-Q3/tasks/youtube.md">view</a>;</li>
+            <li><b>Application:</b> <a href="https://mikhama.art/youtube-client/">mikhama.art/youtube-client</a>.</li>
           </ul>
         </li>
       </ul>

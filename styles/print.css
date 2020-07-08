@@ -1,0 +1,158 @@
+body {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+main {
+  max-width: 740px;
+  margin: 48px auto;
+}
+
+time {
+  font-weight: 700;
+  color: rgb(110, 110, 110);
+}
+
+.block {
+  padding: 0 48px;
+  margin: 48px 0;
+  font-family: "Signika Negative", "Trebuchet MS", sans-serif;
+}
+
+.block p:not(.vacancy) {
+  font-size: 14pt;
+  line-height: 1.3em;
+  text-align: justify;
+}
+
+.block p:not(.no-first-letter)::first-letter {
+  display: block;
+  float: left;
+  padding-right: 16px;
+  font-weight: 400;
+  font-size: 48pt;
+  line-height: 1em;
+  font-family: "Rubik Mono One", "Arial Black", sans-serif;
+}
+
+.heading {
+  font-weight: 400;
+  font-family: "Rubik Mono One", "Arial Black", sans-serif;
+  text-transform: uppercase;
+}
+
+.heading:not(h1) {
+  padding-left: 48px;
+  color: white;
+  background-color: black;
+}
+
+.icon {
+  font-weight: 700;
+}
+
+.icon a {
+  font-weight: 400;
+}
+
+.candidate {
+  text-align: center;
+}
+
+.candidate .avatar {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 3px solid black;
+}
+
+.candidate .avatar.normal {
+  display: none;
+}
+
+.candidate .heading {
+  margin-bottom: 0;
+}
+
+.candidate .vacancy {
+  margin: 8px auto 56px;
+  font-weight: 700;
+  font-size: 18pt;
+}
+
+.candidate .contacts,
+.skills .skills-icons,
+.skill-tags,
+.list {
+  list-style: none;
+}
+
+.candidate .contacts {
+  display: flex;
+  flex-flow: column;
+  padding: 0;
+  text-align: left;
+}
+
+.candidate .contacts .icon {
+  margin-bottom: 8px;
+}
+
+.list {
+  padding: 0;
+  font-size: 12pt;
+  line-height: 1.5em;
+}
+
+.list .list-item {
+  margin-top: 36px;
+}
+
+.list .sub-list {
+  list-style: square;
+}
+
+.block p.item-title {
+  font-weight: 700;
+  margin-bottom: 0;
+  font-size: 18pt;
+}
+
+.block p.item-details {
+  margin-top: 0;
+}
+
+.details {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.skill-tags {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  align-content: flex-start;
+  justify-content: flex-end;
+  width: 300px;
+}
+
+.skill-tags li {
+  background: black;
+  color: white;
+  display: inline-block;
+  height: fit-content;
+  margin: 4px;
+  padding: 8px;
+}
+
+.skill-tags .english {
+  background: white;
+  border: 2px solid black;
+  color: black;
+}
+
+.skills,
+.english-level {
+  display: none;
+}
