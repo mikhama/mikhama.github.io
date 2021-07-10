@@ -83,67 +83,67 @@ time {
 }
 
 .icon.phone::before {
-  background: url("../images/phone.png");
-  background-size: cover;
+  background: url("../images/phone.png") no-repeat;
+  background-size: contain;
 }
 
 .icon.email::before {
-  background: url("../images/email.png");
-  background-size: cover;
+  background: url("../images/email.png") no-repeat;
+  background-size: contain;
 }
 
 .icon.website::before {
-  background: url("../images/website.png");
-  background-size: cover;
+  background: url("../images/website.png") no-repeat;
+  background-size: contain;
 }
 
 .icon.github::before {
-  background: url("../images/github.png");
-  background-size: cover;
+  background: url("../images/github.png") no-repeat;
+  background-size: contain;
 }
 
 .icon.linkedin::before {
-  background: url("../images/linkedin.png");
-  background-size: cover;
+  background: url("../images/linkedin.png") no-repeat;
+  background-size: contain;
 }
 
 .icon.js::before {
-  background: url("../images/js.png");
-  background-size: cover;
+  background: url("../images/js.png") no-repeat;
+  background-size: contain;
 }
 
 .icon.react::before {
-  background: url("../images/react.png");
-  background-size: cover;
+  background: url("../images/react.png") no-repeat;
+  background-size: contain;
 }
 
 .icon.aws::before {
-  background: url("../images/aws.png");
-  background-size: cover;
+  background: url("../images/aws.png") no-repeat;
+  background-size: contain;
 }
 
 .icon.nodejs::before {
-  background: url("../images/nodejs.png");
-  background-size: cover;
+  background: url("../images/nodejs.png") no-repeat;
+  background-size: contain;
 }
 .icon.html::before {
-  background: url("../images/html.png");
-  background-size: cover;
+  background: url("../images/html.png") no-repeat;
+  background-size: contain;
 }
 
 .icon.css::before {
-  background: url("../images/css.png");
-  background-size: cover;
+  background: url("../images/css.png") no-repeat;
+  background-size: contain;
 }
 
 .icon.git::before {
-  background: url("../images/git.png");
-  background-size: cover;
+  background: url("../images/git.png") no-repeat;
+  background-size: contain;
 }
 
-.icon.console::before {
-  background: url("../images/console.png");
-  background-size: cover;
+.icon.postgres::before {
+  background: url("../images/postgres.svg") no-repeat;
+  background-size: contain;
 }
 
 .candidate {
@@ -188,6 +188,17 @@ time {
 
 .candidate .contacts .icon {
   margin-bottom: 8px;
+}
+
+.contacts .icon {
+  height: 30px;
+  line-height: 30px;
+  margin-left: 40px;
+}
+
+.contacts .icon::before {
+  width: 30px;
+  left: -30px;
 }
 
 .skills .icon {
