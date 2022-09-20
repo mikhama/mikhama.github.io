@@ -1,3 +1,3 @@
 # My own CV and portfolio website
 
-https://mikhama.art/
+https://mikhama.github.io
