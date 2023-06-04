@@ -15,7 +15,10 @@
 <body>
   <main>
     <article class="block candidate">
-      <img class="avatar normal" src="images/avatar.jpg" alt="Dzmitry Tsebruk" width="300" height="300" />
+      <video class="animated-avatar" id="video" width="300" height="533" autoplay onclick="document.getElementById('video').play()" onended="document.getElementById('video').style.display='none'">
+        <source src="images/avatar.mp4" type="video/mp4">
+      </video>
+      <img class="avatar normal" src="images/avatar.jpg" alt="Dzmitry Tsebruk" width="300" height="300" onclick="const v = document.getElementById('video'); v.style.display='inline'; v.play();" />
       <img class="avatar sketch" src="images/avatar-sketch.jpg" alt="Dzmitry Tsebruk" width="300" height="300" />
       <h1 class="heading">Dzmitry Tsebruk</h1>
       <p class="vacancy no-first-letter">Full Stack Javascript Engineer</p>

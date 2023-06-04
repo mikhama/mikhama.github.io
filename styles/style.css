@@ -157,6 +157,13 @@ time {
   box-shadow: 0 0 8px rgb(31, 31, 31);
 }
 
+.candidate .animated-avatar {
+  position: absolute;
+  height: 300px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
 .candidate .avatar.sketch {
   display: none;
 }
